@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import clsx from 'clsx';
 import styles from './login.module.css';
 import Image from 'next/image';
@@ -7,7 +7,7 @@ import Button from '@material-ui/core/Button';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Lock from '@material-ui/icons/LockOpen';
 import GroupAddIcon from '@material-ui/icons/GroupAdd';
-import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
+import { makeStyles, fade ,Theme, createStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
 import OutlinedInput from '@material-ui/core/OutlinedInput';
 import InputLabel from '@material-ui/core/InputLabel';
@@ -16,6 +16,9 @@ import FormControl from '@material-ui/core/FormControl';
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import TextField from '@material-ui/core/TextField';
+import Link from 'next/link';
+import Router from 'next/router';
+
 
 
 const theme = createMuiTheme({
@@ -56,6 +59,7 @@ interface State {
 }
 
 export default function login(){
+    const [user, setUser] = useState('');
     const classes = useStyles();
     const [values, setValues] = React.useState<State>({
       amount: '',
@@ -67,15 +71,22 @@ export default function login(){
     const handleChange = (prop: keyof State) => (event: React.ChangeEvent<HTMLInputElement>) => {
         setValues({ ...values, [prop]: event.target.value });
     };
-
     const handleClickShowPassword = () => {
         setValues({ ...values, showPassword: !values.showPassword });
     };
-
     const handleMouseDownPassword = (event: React.MouseEvent<HTMLButtonElement>) => {
         event.preventDefault();
     };
-
+    function Authentication(usuario:string,senha:string){
+        if(usuario=="fredericocampos"&&senha=="123456"){
+            Router.push('/painelAluno');
+            console.log("painel Aluno");
+        }
+        else{
+            alert("Login e senha inválidos!");
+        }
+        console.log(user,senha);
+    };
     return(
         <>
         <div className={styles.container}>
@@ -88,7 +99,7 @@ export default function login(){
                     Efetue o Login
                 </div>
                 <div className={styles.inputs}>
-                    <TextField className={clsx(classes.margin, classes.textField)}id="outlined-basic" label="Digite seu Usuário" variant="outlined" />
+                    <TextField onChange= {(event) => setUser(event.target.value)} className={clsx(classes.margin, classes.textField)} id="outlined-basic" label="Digite seu Usuário" variant="outlined" />
                     <FormControl className={clsx(classes.margin, classes.textField)} variant="outlined">
                     <InputLabel htmlFor="outlined-adornment-password">Digite sua Senha</InputLabel>
                     <OutlinedInput
@@ -113,20 +124,24 @@ export default function login(){
                     </FormControl>
                 </div>
                 <div className={styles.forgot}>
-                    <a >Esqueci minha Senha</a>
+                    <Link href='/forgotPassword'>
+                        <a>Esqueci minha Senha</a>
+                    </Link>
                 </div>
                 <div className={styles.buttons}>
                     <div className={styles.buttonAdd}>
                     <MuiThemeProvider theme={theme}>
-                        <Button variant="contained" color="primary">
-                            <GroupAddIcon></GroupAddIcon>
-                            Cadastrar
-                        </Button>
+                        <Link href='/newUser'>
+                            <Button variant="contained" color="primary">
+                                <GroupAddIcon></GroupAddIcon>
+                                Cadastrar
+                            </Button>
+                        </Link>
                     </MuiThemeProvider>
                     </div>      
                     <div className={styles.buttonEnter}>
                     <MuiThemeProvider theme={theme}>          
-                        <Button variant="contained" color="primary">
+                        <Button variant="contained" color="primary" onClick={()=>Authentication(user,values.password)}>
                             <Lock></Lock>
                             Entrar
                         </Button>
