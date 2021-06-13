@@ -19,8 +19,6 @@ import TextField from '@material-ui/core/TextField';
 import Link from 'next/link';
 import Router from 'next/router';
 
-
-
 const theme = createMuiTheme({
     palette: {
       primary: {
