@@ -17,17 +17,8 @@ export default function header(){
                     </Link>
                 </div>
                 <div className={styles.menuArea}>
-                    <ul className={styles.menu}>
-                            <li><Link href="/about"><a>Quem Somos</a></Link></li>
-                            <li><Link href ="/profhenrique"><a>Professor Henrique Araújo</a></Link></li>
-                            <li><Link href ="/depoimentos"><a>Depoimentos</a></Link></li>
-                            <li><Link href ="/planos"><a>Planos</a></Link></li>
-                        </ul>
                 </div>
                 <div className={styles.left}>
-                <Button variant="contained" color="primary" size="medium" startIcon={<LockIcon/>}>
-                    Login
-                </Button>
                 </div>
             </section>        
             <div className={styles.elementor}>
