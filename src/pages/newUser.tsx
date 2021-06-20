@@ -7,7 +7,7 @@ export default function newUser() {
         <>
         <div className={styles.container}>
           <Header/>
-          <h1>New User</h1>
+          <p className={styles.paragrafo}>Página de Cadastro de Usuário - Falta a Rahuany criar o template desta página</p>
           <Footer/>
         </div>
         </>

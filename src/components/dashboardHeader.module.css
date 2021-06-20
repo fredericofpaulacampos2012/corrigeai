@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+.copyright{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-family: 'Poppins',sans-serif;
+}

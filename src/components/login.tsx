@@ -22,9 +22,7 @@ import Router from 'next/router';
 const theme = createMuiTheme({
     palette: {
       primary: {
-        light: '#72B01D',
         main: '#72B01D',
-        dark: '#3DCE6C',
         contrastText: '#f2f2f2',
       },
     },
@@ -76,7 +74,7 @@ export default function login(){
         event.preventDefault();
     };
     function Authentication(usuario:string,senha:string){
-        if(usuario=="fredericocampos"&&senha=="123456"){
+        if(usuario=="admin"&&senha=="admin"){
             Router.push('/painelAluno');
             console.log("painel Aluno");
         }
