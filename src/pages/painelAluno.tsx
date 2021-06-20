@@ -73,7 +73,7 @@ export default function Dashboard() {
                 </div>
                 </ThemeProvider>
                 <div className={styles.cardGrande}>
-                  {/*<Card elevation={3} className={styles.cardG}>
+                  <Card elevation={3} className={styles.cardG}>
                       <CardContent className={styles.cardContentG}>
                         <div className={styles.iconG}>
                           <HistoryIcon color="primary"/>
@@ -81,8 +81,7 @@ export default function Dashboard() {
                         </div>
                             <Graph/>
                       </CardContent>
-                    </Card>*/}
-                    <Graph/>
+                    </Card>
                 </div>
               </div>
               <div className={styles.right}>

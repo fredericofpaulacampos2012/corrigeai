@@ -9,17 +9,44 @@ export default function Linechart () {
             <Line
                 height={500}
                 width={1100}
-                options={{
-                    maintainAspectRatio:false,
-                }}
                 type= 'Line'
                 data= {{
-                    labels: ['Redação1','Redação2','Redação3','Redação4'],
+                    labels: [
+                        'Democratização do Acesso ao Cinema no Brasil',
+                        'O Estigma associado as Doenças Mentais',
+                        'Democratização do Acesso ao Cinema no Brasil',
+                        'O Estigma associado as Doenças Mentais',
+                    ],
                     datasets: [{
-                        label: 'Notas dos Últimos Envios',
+                        label: 'Nota do Aluno',
                         data: [760,800,900,800],
+                        borderWidth:3,
+                        fill: true,
+                        backgroundColor:'rgba(114, 176, 29,0.3)',
+                        borderColor: 'rgba(114, 176, 29,0.9)',
+                        tension: 0.4
                     }]
                 }}
+                options={{
+                    maintainAspectRatio:false,
+                    scales: {
+                        y: {
+                            display:false,
+                            beginAtZero: false,
+                            grid:{
+                                display:false,
+                            }
+                        },
+                        x:{
+                            display:false,
+                            grid:{
+                                display:false,
+
+                            }
+                        },
+                    }
+                }}
+
             />
         </div>
     </>
