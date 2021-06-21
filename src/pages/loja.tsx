@@ -1,14 +1,14 @@
 import React ,{ useState,useEffect } from 'react';
 import styles from '../styles/Home.module.css';
 import MenuDrawer from '../components/dashboardHeader';
-import ContactMailIcon from '@material-ui/icons/ContactMail';
+import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 
 export default function Dashboard() {
-  const [title,setTitle] = useState('Painel do Aluno');
+  const [title,setTitle] = useState('Comprar mais Envios');
   const [icon,setIcon] = useState();
   useEffect(() => {
-    setTitle("Perfil");
-    setIcon(<ContactMailIcon/>);
+    setTitle("Comprar mais Envios");
+    setIcon(<ShoppingBasketIcon/>);
   }, [])
 
   return (
@@ -16,7 +16,7 @@ export default function Dashboard() {
         <div className={styles.container}>
           <MenuDrawer title={title} icon={icon}>
             <div>
-              Página de Perfil - Falta a Rahuany criar o template desta página 
+              Página Comprar mais Envios - Falta a Rahuany criar o template desta página 
             </div>
           </MenuDrawer>
         </div>

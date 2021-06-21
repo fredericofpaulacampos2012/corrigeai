@@ -7,8 +7,6 @@ export default function Linechart () {
     <>
         <div className={styles.grafDiv}>
             <Line
-                height={500}
-                width={1100}
                 type= 'Line'
                 data= {{
                     labels: [
@@ -28,6 +26,11 @@ export default function Linechart () {
                     }]
                 }}
                 options={{
+                    legend: {
+                        title:{
+                            display: false,
+                        },                        
+                    },
                     maintainAspectRatio:false,
                     scales: {
                         y: {

@@ -1,14 +1,14 @@
 import React ,{ useState,useEffect } from 'react';
 import styles from '../styles/Home.module.css';
 import MenuDrawer from '../components/dashboardHeader';
-import ContactMailIcon from '@material-ui/icons/ContactMail';
+import MenuBookIcon from '@material-ui/icons/MenuBook';
 
 export default function Dashboard() {
-  const [title,setTitle] = useState('Painel do Aluno');
+  const [title,setTitle] = useState('Como Enviar sua Redação');
   const [icon,setIcon] = useState();
   useEffect(() => {
-    setTitle("Perfil");
-    setIcon(<ContactMailIcon/>);
+    setTitle("Como Enviar sua Redação");
+    setIcon(<MenuBookIcon/>);
   }, [])
 
   return (
@@ -16,7 +16,7 @@ export default function Dashboard() {
         <div className={styles.container}>
           <MenuDrawer title={title} icon={icon}>
             <div>
-              Página de Perfil - Falta a Rahuany criar o template desta página 
+              Página do Tutorial Como Enviar Redação - Falta a Rahuany criar o template para esta página
             </div>
           </MenuDrawer>
         </div>
