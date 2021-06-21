@@ -1,0 +1,144 @@
+    .container {
+    min-height: 100vh;
+    height: 100vh;
+    background-color: #e6e6e6;
+    }
+    .body{ 
+      width:100%;
+      height:450px;
+    }
+    .linha1{
+        display:flex;
+        justify-content: center;
+        width:100%;
+        height:13%;
+    }
+    .linha2{
+        width:100%;
+        height:52%;
+        display:flex;
+        justify-content: center;
+        margin-top:10px;
+    }
+    .linha3{
+        display:flex;
+        width:100%;
+        height:35%;
+    }
+    .cardTitle{
+        width:75%;
+        height:100%;
+        box-shadow: 5px 5px 5px #999999;
+    }
+    .cardTitleContent{
+        width:100%;
+        height:100%;
+        background-color: #f2f2f2;
+    }
+    .textTitle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .enviosBlock{
+        width:75%;
+        height:100%;
+        border-radius: 10px;
+        background-color: #f2f2f2;
+        box-shadow: 0px 0px 4px #666;
+    }
+    .envioLinha{
+        display: flex;
+        width:100%;
+        height:14%;
+    }
+    .firstColumn{
+        display:flex;
+        width:15%;
+        justify-content: center;
+        align-items: center;
+        margin:0;
+    }
+    .secondColumn{
+        margin:0;
+        display:flex;
+        width:70%;
+        justify-content: center;
+    }
+    .thirdColumn{
+        margin:0;
+        display:flex;
+        width:15%;
+        justify-content: center;
+    }
+    .data{
+        width:100px;
+        height:80%;
+        text-align: center;
+        align-items: center;
+        border-radius:7px;
+        background-color: #999999;
+    }
+    .temaEnvio{
+        width:90%;
+        height:80%;
+        text-align: center;
+        align-items: center;
+        border-radius:7px;
+        background-color: #999999;
+    }
+    .nota{
+        width:100px;
+        height:80%;
+        text-align: center;
+        align-items: center;
+        border-radius:7px;
+        background-color: #999999;
+    }
+    .GraphCol1{
+        display:flex;
+        margin-top:7px;
+        width:72%;
+        height:95%;
+        justify-content: space-around;
+    }
+    .GraphCol2{
+        display: flex;
+        align-items: center;
+        justify-content: center;;
+        margin-top:7px;
+        width:28%;
+        height:95%;
+    }
+    .graph1{
+        background-color:#f2f2f2;
+        width:30%;
+        height:100%;
+        box-shadow:0px 0px 5px #999999;
+        border-radius:10px;
+    }
+    .graph2{
+        background-color:#f2f2f2;
+        width:30%;
+        height:100%;
+        box-shadow:0px 0px 5px #999999;
+        border-radius:10px;
+    }
+    .graph3{
+        background-color:#f2f2f2;
+        width:30%;
+        height:100%;
+        box-shadow:0px 0px 5px #999999;
+        border-radius:10px;
+    }
+    .grafTitle{
+        display:flex;
+        width:100%;
+        justify-content: center;
+    }
+    .grafbody{
+        display:flex;
+        width:100%;
+        height:90%;
+        justify-content: center;
+    }
