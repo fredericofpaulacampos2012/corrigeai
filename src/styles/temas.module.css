@@ -1,0 +1,155 @@
+    .container {
+    min-height: 100vh;
+    height: 100vh;
+    background-color: #e6e6e6;
+    }
+    .body{
+      display:flex;
+      width:100%;
+      height:450px;
+    }
+    .left{
+    width:70%;
+    height:100%;
+    }
+    .right{
+    display:flex;
+    justify-content: space-around;
+    width:30%;
+    height:100%;
+    padding:10px;
+    background-color:#72B01d;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px #999999;
+    }
+    .doisCards{
+    width:100%;
+    height:25%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    }
+    .cardGrande{
+    width:100%;
+    height:75%;
+    justify-content: center;
+    }
+    .card{
+        width:280px;
+        height:100px;
+        box-shadow: 5px 5px 15px #999999;
+    }
+    .cardContent{
+        background-color: #f2f2f2;
+        height:100%;
+        width:100%;
+        align-content: space-around;
+    }
+    .icon{
+        display:flex;
+        justify-content: flex-end;
+        margin-bottom:10px;
+    }
+    .iconCard{
+      color:#72B01D;
+    }
+    .text{
+        display:flex;
+        justify-content: center;
+    }
+    .text:hover{
+        background-color:rgba(114, 176, 29,0.3);
+        cursor:pointer;
+        transition: 0.5;
+        border-radius: 5px;
+    }
+    .cardRedacao{
+        display: flex;
+        width:100%;
+        height:85%;
+        justify-content: center;
+    }
+    .cardRedacaobtn{
+        display: flex;
+        width:100%;
+        height:15%;
+        justify-content: center;
+        align-items: center;
+    }
+    .btn{
+        height:40px;
+        width:300px;
+        box-shadow: 5px 5px 5px #999999;
+    }
+    .cardScroll{
+        height: 280px;
+        width:85%;
+        overflow-y: scroll;
+        box-shadow: 5px 5px 15px #999999;
+    }
+    .cardGRedacao{
+        width:100%;
+        height:100%;
+    }
+    .cardGRedacaoContent{
+        background-color: #f2f2f2;
+        height:100%;
+        width:100%;
+    }
+    .linha1{
+        display:flex;
+        width:100%;
+        justify-content: center;
+    }
+    .linha2{
+        display:flex;
+        width:100%;
+        height:100%;
+        justify-content: center;
+    }
+    .cardRTema{
+        background-color:#ccc;
+        border-radius:10px;
+        padding:0 10px;
+        text-align: center;
+        width:90%;
+    }
+    .cardRConteudo{
+        background-color:#ccc;
+        border-radius:10px;
+        padding:5px 10px;
+        margin-top:10px;
+        width:90%;
+        height:85%;
+    }
+    .containerRight{
+        height: 95%;
+        margin-top:10px;
+        border-radius: 15px;
+        padding:5px;
+        background-color: #f2f2f2;
+        width:95%;
+        overflow-y: scroll;
+        box-shadow: 5px 5px 15px #999999;
+    }
+    .cardTemaR{
+        height:65px;
+        margin-top:5px;
+        padding:0;
+        box-shadow: 5px 5px 15px #999999;
+    }
+    .cardTemaR:hover{
+        cursor: pointer;
+    }
+    .cardTemaRContent{
+        height:100%;
+        margin:0;
+        padding:0;
+        background-color: #ccc;
+        text-align: center;
+    }
+    .cardTemaRContent:hover{
+        background-color: rgba(114, 176, 29,0.3);
+    }
+      
+  

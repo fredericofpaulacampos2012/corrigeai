@@ -4,7 +4,6 @@ import MenuDrawer from '../components/dashboardHeader';
 import Graph from '../components/grafico';
 import UserPanel from '@material-ui/icons/AccountCircle';
 import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
 import CardContent from '@material-ui/core/CardContent';
 import { Typography } from '@material-ui/core';
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
@@ -41,7 +40,6 @@ const customRight = createMuiTheme({
       contrastText: '#f2f2f2',
     },
   },
-
 });
 
 export default function Dashboard() {
