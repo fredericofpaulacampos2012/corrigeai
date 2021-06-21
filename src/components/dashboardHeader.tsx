@@ -283,7 +283,7 @@ export default function MiniDrawer({children,title,icon}) {
                 button 
                 key={item.text} 
                 onClick={()=> history.push(item.path)}
-                className={history.pathname==item.path ? classes.active : null}>
+                className={history.pathname==item.path ? classes.active : ""}>
               <ListItemIcon className={classes.icons}>{item.icon}</ListItemIcon>
               <ListItemText primary={item.text} />
             </ListItem>
