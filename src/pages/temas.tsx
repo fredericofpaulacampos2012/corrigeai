@@ -191,7 +191,7 @@ export default function Dashboard() {
                 <div className={styles.containerRight}>
                      <div onClick={()=> {setTema(tema)}}>
                      {menuItems.map((item) => (
-                        <Card hoverable className={styles.cardTemaR}
+                        <Card className={styles.cardTemaR}
                           style={{ borderRadius: 10 }}>
                           <CardContent className={styles.cardTemaRContent}>
                             <Typography variant='body2'>
