@@ -18,6 +18,7 @@ import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import TextField from '@material-ui/core/TextField';
 import Link from 'next/link';
 import Router from 'next/router';
+import Input from '@material-ui/core/Input';
 
 const theme = createMuiTheme({
     palette: {
@@ -47,10 +48,7 @@ const theme = createMuiTheme({
 );
 
 interface State {
-    amount: string;
     password: string;
-    weight: string;
-    weightRange: string;
     showPassword: boolean;
 }
 
@@ -58,10 +56,7 @@ export default function login(){
     const [user, setUser] = useState('');
     const classes = useStyles();
     const [values, setValues] = React.useState<State>({
-      amount: '',
       password: '',
-      weight: '',
-      weightRange: '',
       showPassword: false,
     });
     const handleChange = (prop: keyof State) => (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -95,28 +90,26 @@ export default function login(){
                     Efetue o Login
                 </div>
                 <div className={styles.inputs}>
-                    <TextField onChange= {(event) => setUser(event.target.value)} className={clsx(classes.margin, classes.textField)} id="outlined-basic" label="Digite seu Usuário" variant="outlined" />
-                    <FormControl className={clsx(classes.margin, classes.textField)} variant="outlined">
-                    <InputLabel htmlFor="outlined-adornment-password">Digite sua Senha</InputLabel>
-                    <OutlinedInput
-                        id="outlined-adornment-password"
-                        type={values.showPassword ? 'text' : 'password'}
-                        value={values.password}
-                        onChange={handleChange('password')}
-                        endAdornment={
-                        <InputAdornment position="end">
-                            <IconButton
-                            aria-label="toggle password visibility"
-                            onClick={handleClickShowPassword}
-                            onMouseDown={handleMouseDownPassword}
-                            edge="end"
-                            >
-                            {values.showPassword ? <Visibility /> : <VisibilityOff />}
-                            </IconButton>
-                        </InputAdornment>
-                        }
-                        labelWidth={125}
-                    />
+                    <TextField onChange= {(event) => setUser(event.target.value)} className={clsx(classes.margin, classes.textField)} id="outlined-basic" label="Digite seu Usuário" />
+                    <FormControl className={clsx(classes.margin, classes.textField)}>
+                        <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
+                        <Input
+                            id="standard-adornment-password"
+                            type={values.showPassword ? 'text' : 'password'}
+                            value={values.password}
+                            onChange={handleChange('password')}
+                            endAdornment={
+                            <InputAdornment position="end">
+                                <IconButton
+                                aria-label="toggle password visibility"
+                                onClick={handleClickShowPassword}
+                                onMouseDown={handleMouseDownPassword}
+                                >
+                                {values.showPassword ? <Visibility /> : <VisibilityOff />}
+                                </IconButton>
+                            </InputAdornment>
+                            }
+                        />
                     </FormControl>
                 </div>
                 <div className={styles.forgot}>
