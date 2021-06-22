@@ -4,17 +4,15 @@ import MenuDrawer from '../components/dashboardHeader';
 import Search from '@material-ui/icons/Search';
 
 export default function Dashboard() {
-  const [title,setTitle] = useState('Sobre');
-  const [icon,setIcon] = useState();
-  useEffect(() => {
-    setTitle("Sobre");
-    setIcon(<Search/>);
-  }, [])
-
+  const pagina =
+  {
+    title:"Sobre",
+    icon:<Search/>,
+  };
   return (
         <>
         <div className={styles.container}>
-          <MenuDrawer title={title} icon={icon}>
+          <MenuDrawer title={pagina.title} icon={pagina.icon}>
             <div>
               Página do Sobre - Falta a Rahuany criar o template para esta página
             </div>

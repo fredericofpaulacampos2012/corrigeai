@@ -4,17 +4,15 @@ import MenuDrawer from '../components/dashboardHeader';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
 
 export default function Dashboard() {
-  const [title,setTitle] = useState('Painel do Aluno');
-  const [icon,setIcon] = useState();
-  useEffect(() => {
-    setTitle("Perfil");
-    setIcon(<ContactMailIcon/>);
-  }, [])
-
+  const pagina =
+  {
+    title:"Perfil",
+    icon:<ContactMailIcon/>,
+  };
   return (
         <>
         <div className={styles.container}>
-          <MenuDrawer title={title} icon={icon}>
+          <MenuDrawer title={pagina.title} icon={pagina.icon}>
             <div>
               Página de Perfil - Falta a Rahuany criar o template desta página 
             </div>

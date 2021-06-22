@@ -4,17 +4,15 @@ import MenuDrawer from '../components/dashboardHeader';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 
 export default function Dashboard() {
-  const [title,setTitle] = useState('Como Enviar sua Redação');
-  const [icon,setIcon] = useState();
-  useEffect(() => {
-    setTitle("Como Enviar sua Redação");
-    setIcon(<MenuBookIcon/>);
-  }, [])
-
+  const pagina =
+  {
+    title:"Como Enviar sua Redação",
+    icon:<MenuBookIcon/>,
+  };
   return (
         <>
         <div className={styles.container}>
-          <MenuDrawer title={title} icon={icon}>
+          <MenuDrawer title={pagina.title} icon={pagina.icon}>
             <div>
               Página do Tutorial Como Enviar Redação - Falta a Rahuany criar o template para esta página
             </div>

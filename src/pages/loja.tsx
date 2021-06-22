@@ -4,17 +4,15 @@ import MenuDrawer from '../components/dashboardHeader';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 
 export default function Dashboard() {
-  const [title,setTitle] = useState('Comprar mais Envios');
-  const [icon,setIcon] = useState();
-  useEffect(() => {
-    setTitle("Comprar mais Envios");
-    setIcon(<ShoppingBasketIcon/>);
-  }, [])
-
+  const pagina =
+  {
+    title:"Comprar mais Envios",
+    icon:<ShoppingBasketIcon/>,
+  };
   return (
         <>
         <div className={styles.container}>
-          <MenuDrawer title={title} icon={icon}>
+          <MenuDrawer title={pagina.title} icon={pagina.icon}>
             <div>
               Página Comprar mais Envios - Falta a Rahuany criar o template desta página 
             </div>

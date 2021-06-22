@@ -4,17 +4,15 @@ import MenuDrawer from '../components/dashboardHeader';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
 
 export default function Dashboard() {
-  const [title,setTitle] = useState('Minha Conta');
-  const [icon,setIcon] = useState();
-  useEffect(() => {
-    setTitle("Minha Conta");
-    setIcon(<AccountBoxIcon/>);
-  }, [])
-
+  const pagina =
+  {
+    title:"Minha Conta",
+    icon:<AccountBoxIcon/>,
+  };
   return (
         <>
         <div className={styles.container}>
-          <MenuDrawer title={title} icon={icon}>
+          <MenuDrawer title={pagina.title} icon={pagina.icon}>
             <div>
               Página Minha Conta - Falta a Rahuany criar o template desta página 
             </div>

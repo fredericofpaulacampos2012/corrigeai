@@ -90,19 +90,15 @@ export default function Dashboard() {
       tipNota:"Atenção! Sua Nota Caiu",
     },
   ];
-
-  const [title,setTitle] = useState('Envios');
-  const [icon,setIcon] = useState();
-
-  useEffect(() => {
-    setTitle("Envios");
-    setIcon(<Envios/>);
-  }, [])
-
+  const pagina =
+  {
+    title:"Envios",
+    icon:<Envios/>,
+  };
   return (
         <>
         <div className={styles.container}>
-          <MenuDrawer title={title} icon={icon}>
+          <MenuDrawer title={pagina.title} icon={pagina.icon}>
             <div className={styles.body}>
               <div className={styles.linha1}>
                   <Card style={{ borderRadius: 10 }} elevation={3} className={styles.cardTitle}>

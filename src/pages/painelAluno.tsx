@@ -43,17 +43,15 @@ const customRight = createMuiTheme({
 });
 
 export default function Dashboard() {
-  const [title,setTitle] = useState('Painel do Aluno');
-  const [icon,setIcon] = useState();
-  useEffect(() => {
-    setTitle("Painel do Aluno");
-    setIcon(<UserPanel/>);
-  }, [])
-
+  const pagina =
+  {
+    title:"Painel do Aluno",
+    icon:<UserPanel/>,
+  };
   return (
         <>
         <div className={styles.container}>
-          <MenuDrawer title={title} icon={icon}>
+          <MenuDrawer title={pagina.title} icon={pagina.icon}>
             <div className={styles.body}>
               <div className={styles.left}>
                 <ThemeProvider theme={personalizado}>

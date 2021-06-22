@@ -6,15 +6,15 @@ import Help from '@material-ui/icons/Help';
 export default function Dashboard() {
   const [title,setTitle] = useState('Alô CAED!');
   const [icon,setIcon] = useState();
-  useEffect(() => {
-    setTitle("Alô CAED!");
-    setIcon(<Help/>);
-  }, [])
-
+    const menuItems =
+      {
+        title:"Alô CAED!",
+        icon:<Help/>,
+      };
   return (
         <>
         <div className={styles.container}>
-          <MenuDrawer title={title} icon={icon}>
+          <MenuDrawer title={menuItems.title} icon={menuItems.icon}>
             <div>
               Página do Alô CAED - Falta a Rahuany criar o template para esta página
             </div>

@@ -4,17 +4,15 @@ import MenuDrawer from '../components/dashboardHeader';
 import TelegramIcon from '@material-ui/icons/Telegram';
 
 export default function Dashboard() {
-  const [title,setTitle] = useState('Enviar Redação');
-  const [icon,setIcon] = useState();
-  useEffect(() => {
-    setTitle("Enviar Redação");
-    setIcon(<TelegramIcon/>);
-  }, [])
-
+  const pagina =
+  {
+    title:"Enviar Redação",
+    icon:<TelegramIcon/>,
+  };
   return (
         <>
         <div className={styles.container}>
-          <MenuDrawer title={title} icon={icon}>
+          <MenuDrawer title={pagina.title} icon={pagina.icon}>
             <div>
               Página Enviar Redação - Falta a Rahuany criar o template desta página 
             </div>

@@ -4,17 +4,16 @@ import MenuDrawer from '../components/dashboardHeader';
 import Desempenho from '@material-ui/icons/TrendingUp';
 
 export default function Dashboard() {
-  const [title,setTitle] = useState('Desempenho');
-  const [icon,setIcon] = useState();
-  useEffect(() => {
-    setTitle("Desempenho");
-    setIcon(<Desempenho/>);
-  }, [])
+  const pagina =
+  {
+    title:"Desempenho",
+    icon:<Desempenho/>,
+  };
 
   return (
         <>
         <div className={styles.container}>
-          <MenuDrawer title={title} icon={icon}>
+          <MenuDrawer title={pagina.title} icon={pagina.icon}>
             <div>
               Página de Desempenho - Falta a Rahuany criar o template para esta página
             </div>
